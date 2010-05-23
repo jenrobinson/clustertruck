@@ -1,8 +1,24 @@
 <?php
+
+	// checks if the server name has the word DEV, ALPHA, or AWESOME in it - if so it's dev
+	if (strpos($_SERVER['SERVER_NAME'],'dev')!==false || strpos($_SERVER['SERVER_NAME'],'alpha')!==false || strpos($_SERVER['SERVER_NAME'],'awesome')!==false) { 
+		$dev = true;
+	} else { 
+		$dev = false;
+	}
+   	
+   	// in dev
+	define("DEV",$dev);
+	
+	if (DEV) { 
+       define("ROOT","/home/scott/clustertruck/");
+    } else { 
+       define("ROOT","/var/www/clustertruck/");
+    }
    	
     // global
-    require("/home/blackstripe/dev.clustertruck.org/clustertruck/framework/Global.php");
-    require("/home/blackstripe/dev.clustertruck.org/clustertruck/framework/Framework.php");
+    require(ROOT."framework/Global.php");
+    require(ROOT."framework/Framework.php");
     
     error_reporting(0 ^ E_NOTICE);
     ini_set("display_errors",0);
@@ -13,11 +29,11 @@
     // what module
     $module = p('module');
     	
-	if ( !$module OR !$module OR !file_exists("/home/blackstripe/dev.clustertruck.org/clustertruck/api/share/modules/{$module}.module.php") ) {
+	if ( !$module OR !$module OR !file_exists(ROOT."api/share/modules/{$module}.module.php") ) {
         Api::errorDoc("Bad Request",403,1);
     } else { 
-    	require("/home/blackstripe/dev.clustertruck.org/clustertruck/api/share/classes/Api.class.php");
-    	require("/home/blackstripe/dev.clustertruck.org/clustertruck/api/share/modules/{$module}.module.php");
+    	require(ROOT."api/share/classes/Api.class.php");
+    	require(ROOT."api/share/modules/{$module}.module.php");
     }
     
     // need a class
