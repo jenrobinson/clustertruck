@@ -27,9 +27,9 @@
     define("ROOT", implode("/",array_slice($path,0,-1))."/");
     
     if (DEV) { 
-       define("FRAMEWORK_ROOT","/home/blackstripe/dev.clustertruck.org/clustertruck/framework/");
+       define("FRAMEWORK_ROOT","/home/scott/clustertruck/framework/");
     } else { 
-       define("FRAMEWORK_ROOT","/home/blackstripe/clustertruck.org/clustertruck/framework/");
+       define("FRAMEWORK_ROOT","/var/www/clustertuck/framework/");
     }
 
     // need to get base tree
@@ -64,10 +64,10 @@
 	// dev twitter acct
 	if ( DEV ) {
 		define("TWITTER_USER","clustertruckdev");
-		define("TWITTER_PASS","clu$tertruck");
+		define("TWITTER_PASS",'clu$tertruck');
 	} else { 
 		define("TWITTER_USER","clustertruck");
-		define("TWITTER_PASS","clu$tertruck");
+		define("TWITTER_PASS",'clu$tertruck');
 	}
 	
 	// google
