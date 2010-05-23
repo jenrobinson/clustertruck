@@ -74,9 +74,9 @@
 	define("GOOGLE_MAPS_API",'');
 	
 	//s3
-	define('S3_ACCESS','');
-	define('S3_SECRET','');
-	define('S3_BUCKET', '');
+	define('S3_ACCESS','AKIAISEG4NWZ6RDDS2IQ');
+	define('S3_SECRET','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');
+	define('S3_BUCKET', 'clustertruck');
 	
 	///////////////////////////////////////////////////////////////////////////////
 	
@@ -110,21 +110,21 @@
 		private static $config = array(
 			'db' => array(
 			    'user' => 'clusteruser',
-			    'pass' => '',
+			    'pass' => 'FsjezN4a',
 			    'name' => 'clustertruck_db',
-			    'host' => 'db.clustertruck.org'
+			    'host' => 'localhost'
 			),
 			'db_prod' => array(
 			    'user' => 'clusteruser',
-			    'pass' => '',
+			    'pass' => 'FsjezN4a',
 			    'name' => 'clustertruck_db',
-			    'host' => 'db.clustertruck.org'
+			    'host' => 'localhost'
 			),
 			'db_dev' => array(
 			    'user' => 'clusteruser',
-			    'pass' => '',
+			    'pass' => 'FsjezN4a',
 			    'name' => 'clustertruck_db',
-			    'host' => 'db.clustertruck.org'
+			    'host' => 'localhost'
 			),
 			'pages' => array(
 			

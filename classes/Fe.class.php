@@ -372,7 +372,7 @@ abstract class Fe extends Framework {
 						@unlink($uploadfile);
 
 						// make our r
-						$r =  'http://'.S3_BUCKET.'/' . basename($uploadfile); 
+						$r =  'http://'.S3_BUCKET.'.s3.amazon.com/' . basename($uploadfile); 
 							
 					}
 					
