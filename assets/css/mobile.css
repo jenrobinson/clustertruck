@@ -1,0 +1,189 @@
+body { 
+	font-family:arial,helvetica,clean,sans-serif;
+	font-size:93%;
+}
+
+img { 
+	border: 0;
+}
+
+a { 
+	color: red;
+	text-decoration: none;	
+}
+
+.ad { 
+	margin: .25em 0 1em -9px;
+}
+
+.caption { 
+	display: block;
+	text-align: right;
+}
+
+.header { 
+	height: 2.3em;
+	margin-bottom: 1.5em;
+}
+
+.header img { 
+	margin-right: .6em;
+}
+
+
+.header h1 { 
+	float: left; 
+	margin-right: .7em;
+	margin-top: 1em;
+	font-size: 1.2em;
+}
+
+.header img.twitter { 
+	margin-right: .6em;
+	margin-top: 1em;
+}
+
+.header .logout { 
+	line-height: 2em;
+	color: #888;
+	float: right; 
+}
+
+
+.main h2 { 
+	-webkit-border-top-left-radius: 5px 5px;
+	-webkit-border-top-right-radius: 5px 5px;
+	background: #f3f3f3;
+	padding: .7em;
+	margin-bottom: 0;
+}
+
+.main h2.highlight { 
+	background: red;
+	color: #fff;
+}
+
+.main p.text { 
+	padding: .5em 1em;
+	font-size: 1.3em;
+}
+
+
+.main ul.touch { 
+	-webkit-padding-start: 0px;
+	padding: 0;
+	margin: 0;
+}
+
+.main ul.touch li {
+	list-style: none;
+	background-color: #000;
+	color: #fff;
+	font-weight: bold;
+	margin-bottom: .2em;
+	font-size: 1.25em;
+} 
+
+.main ul.touch li a {
+	color: #fff;
+	padding: .75em;
+	display: block;
+}
+
+img.icon {
+	float: left;
+	margin: 0 .5em 0 0;
+}
+
+
+.main ul.touch li .google {
+	font-size: .8em;
+	color: red;
+	display: block;
+	margin-left: 58px;
+}
+
+ul.touch li { 
+	position: relative;
+}
+
+ul.touch li.truck, ul.touch li.location  { 
+	min-height: 75px;
+}
+
+
+li.truck em {
+	font-size: .9em;
+	padding-right: 2em;
+}
+
+li.location em { 
+	font-size: .85em;
+	margin: 0 0 .3em 0;
+	padding-right: 2em;
+	display: block;
+	font-style: normal;
+}
+
+li.location p { 
+	font-size: .75em;
+	margin: .3em;
+	text-transform: uppercase;
+	color: #f8f8f8;
+	display:block;
+}
+
+
+ul.form { 
+	margin: 1em 0 0 0;
+	padding: 0 0 0 0;
+	font-size: 1em;
+}
+
+ul.form li { 
+	list-style: none;
+}
+
+ul.form label { 
+	padding: 1em;
+	font-weight: bold;
+}
+
+ul.form label span.example { 
+	color: #888;
+}
+
+ul.form input {
+	width: 90%;
+	margin: .25em 1em 1em;
+	padding: .3em;
+	display: block;
+	font-size: 1em;
+} 
+
+
+.arrow { 
+	position: absolute;
+	right: .5em;
+	top: 25%;
+	font-size: 2em;
+}
+
+.edit { 
+	display: block;
+	font-size: .8em;
+	text-align:right;
+	background: red;
+	color: #000;
+}
+
+ul.touch li .arrow { 
+	top: .1em;
+}
+
+.footer { 
+	color: #999;
+	font-size: 0.8em;
+	padding: 10px 0px;
+	text-align: center;
+} 

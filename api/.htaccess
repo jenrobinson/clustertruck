@@ -1,0 +1,5 @@
+RewriteEngine On
+
+RewriteRule ^v1/([a-z]+)/?(.*)?/?$ htdocs/index.php?module=$1&path=$2 [L,QSA,PT]
+
+RewriteRule ^(.*)?$ htdocs/index.php [L]
