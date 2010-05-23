@@ -1,6 +1,4 @@
-RewriteEngine on
-
-#RewriteRule ^(.*/)?\.svn/ - [F,L]
+RewriteRule ^(.*/)?\.svn/ - [F,L]
 
 # mobile
 RewriteRule ^m/?$ index.php?class=mobile&module=mobile&act=index [L,QSA]
