@@ -29,7 +29,7 @@
     if (DEV) { 
        define("FRAMEWORK_ROOT","/home/scott/clustertruck/framework/");
     } else { 
-       define("FRAMEWORK_ROOT","/var/www/clustertuck/framework/");
+       define("FRAMEWORK_ROOT","/var/www/clustertruck/framework/");
     }
 
     // need to get base tree
