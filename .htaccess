@@ -1,0 +1,56 @@
+RewriteEngine on
+
+RewriteRule ^(.*/)?\.svn/ - [F,L]
+ErrorDocument 403 "Access Forbidden" 
+
+# mobile
+RewriteRule ^m/?$ index.php?class=mobile&module=mobile&act=index [L,QSA]
+RewriteRule ^m/mobile?$ index.php?class=mobile&module=mobile&act=index&t=mobile [L,QSA]
+RewriteRule ^m/map/?$ index.php?class=mobile&module=mobile&act=map [L,QSA]
+RewriteRule ^m/map/([0-9-]+)/?$ index.php?class=mobile&module=mobile&act=location&id=$1 [L,QSA]
+RewriteRule ^m/trucks/([a-zA-Z0-9-]+)/?$ index.php?class=mobile&module=mobile&act=truck&slug=$1 [L,QSA]
+RewriteRule ^m/trucks/?$ index.php?class=mobile&module=mobile&act=trucks [L,QSA]
+RewriteRule ^m/neighborhoods/([a-zA-Z0-9-]+)/?$ index.php?class=mobile&module=mobile&act=neighborhood&slug=$1 [L,QSA]
+RewriteRule ^m/neighborhoods/?$ index.php?class=mobile&module=mobile&act=neighborhoods [L,QSA]
+
+# standard
+RewriteRule ^/?$ index.php?city=la&module=map&act=live [L,QSA]
+RewriteRule ^standard/?$ index.php?city=la&module=map&act=live&t=standard [L,QSA]
+
+RewriteRule ^sitemap.txt index.php?module=index&act=sitemap&.context=text [L,QSA]
+RewriteRule ^robots.txt index.php?module=index&act=robots&.context=text [L,QSA]
+
+#pages
+RewriteRule ^login/?$ index.php?module=user&act=login [L,QSA]
+RewriteRule ^about/?$ index.php?module=index&act=about [L,QSA]
+RewriteRule ^trucks/?$ index.php?module=truck&act=trucks [L,QSA]
+RewriteRule ^trucks/add?$ index.php?module=truck&act=add [L,QSA]
+RewriteRule ^trucks/validate-slug?$ index.php?module=truck&act=validateslug [L,QSA]
+
+#neighborhood
+RewriteRule ^neighborhoods/?$ index.php?module=map&act=arealist [L,QSA]
+RewriteRule ^neighborhoods/([a-zA-Z0-9-]+)/?$ index.php?module=map&act=area&slug=$1 [L,QSA]
+
+RewriteRule ^user/?$ index.php?module=user&act=account [L,QSA]
+RewriteRule ^user/twitter?$ index.php?module=user&act=twitter [L,QSA]
+RewriteRule ^user/logout?$ index.php?module=user&act=logout [L,QSA]
+
+# widgets
+RewriteRule ^widgets/map-([a-zA-Z0-9-]+).js?$ index.php?module=widget&act=map&slug=$1 [L,QSA]
+
+# cron
+RewriteRule ^cron/send-tweet?$ index.php?module=cron&act=twitter [L,QSA]
+RewriteRule ^cron/hourly-recap?$ index.php?module=cron&act=hourlyrecap [L,QSA]
+
+# index user stuff should be short
+RewriteRule ^(login|logout)		index.php?module=user&act=$1 [L,QSA,PT]
+
+RewriteRule ^([a-zA-Z0-9-]+)/?$ index.php?module=truck&act=profile&slug=$1 [L,QSA]
+RewriteRule ^([a-zA-Z0-9-]+)/add-menu/?$ index.php?module=truck&act=menu&slug=$1 [L,QSA]
+RewriteRule ^([a-zA-Z0-9-]+)/add-location/?$ index.php?module=truck&act=location&slug=$1 [L,QSA]
+RewriteRule ^([a-zA-Z0-9-]+)/edit-location/([a-zA-Z0-9-]+)/?$ index.php?module=truck&act=location&slug=$1&location=$2 [L,QSA]
+RewriteRule ^([a-zA-Z0-9-]+)/edit-details/?$ index.php?module=truck&act=editdetails&slug=$1 [L,QSA]
+RewriteRule ^([a-zA-Z0-9-]+)/edit-menu/([a-zA-Z0-9-]+)/?$ index.php?module=truck&act=menu&slug=$1&item=$2 [L,QSA]
+RewriteRule ^([a-zA-Z0-9-]+)/widget/?$ index.php?module=widget&act=demo&slug=$1 [L,QSA]
+
+
