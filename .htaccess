@@ -1,7 +1,6 @@
 RewriteEngine on
 
 RewriteRule ^(.*/)?\.svn/ - [F,L]
-ErrorDocument 403 "Access Forbidden" 
 
 # mobile
 RewriteRule ^m/?$ index.php?class=mobile&module=mobile&act=index [L,QSA]
@@ -52,5 +51,3 @@ RewriteRule ^([a-zA-Z0-9-]+)/edit-location/([a-zA-Z0-9-]+)/?$ index.php?module=t
 RewriteRule ^([a-zA-Z0-9-]+)/edit-details/?$ index.php?module=truck&act=editdetails&slug=$1 [L,QSA]
 RewriteRule ^([a-zA-Z0-9-]+)/edit-menu/([a-zA-Z0-9-]+)/?$ index.php?module=truck&act=menu&slug=$1&item=$2 [L,QSA]
 RewriteRule ^([a-zA-Z0-9-]+)/widget/?$ index.php?module=widget&act=demo&slug=$1 [L,QSA]
-
-
