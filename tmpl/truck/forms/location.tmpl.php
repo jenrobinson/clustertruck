@@ -58,7 +58,7 @@
 		</li>
 		
 	<?php
-		if ($this->hasEditAccess() && $this->user['name'] == 'rochers') { 
+		if ($this->hasEditAccess() && $this->user['name'] == 'clustertruck') { 
 	?>
 				<li>
 					<label>
