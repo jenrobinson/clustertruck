@@ -30,6 +30,10 @@
 		
 		<!-- LOAD YUI3 SEED -->
 		<script src="http://yui.yahooapis.com/3.0.0/build/yui/yui-min.js"></script> 
+		
+		<!-- CHARTBEAT TRACKING -->
+		<script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
+		
 		<script>
 		
 			// setup the CT module with some variables
@@ -141,6 +145,27 @@
 	<!-- BASE YUI3 MODULE -->
 	<script type="text/javascript" src="<?php echo URI; ?>assets/js/base.js?v=<?php echo ASSET_VERSION; ?>"></script>			
 	
+<!-- CHARTBEAT TRACKING --> 
+<script type="text/javascript">
+var _sf_async_config={uid:8030,domain:"clustertruck.org"};
+(function(){
+  function loadChartbeat() {
+    window._sf_endpt=(new Date()).getTime();
+    var e = document.createElement('script');
+    e.setAttribute('language', 'javascript');
+    e.setAttribute('type', 'text/javascript');
+    e.setAttribute('src',
+       (("https:" == document.location.protocol) ? "https://s3.amazonaws.com/" : "http://") +
+       "static.chartbeat.com/js/chartbeat.js");
+    document.body.appendChild(e);
+  }
+  var oldonload = window.onload;
+  window.onload = (typeof window.onload != 'function') ?
+     loadChartbeat : function() { oldonload(); loadChartbeat(); };
+})();
+
+</script>
+
 <!-- GETCLICKY TRACKING -->
 	<script type="text/javascript">
 var clicky = { log: function(){ return; }, goal: function(){ return; }};
