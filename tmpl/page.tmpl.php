@@ -34,6 +34,9 @@
 		<!-- CHARTBEAT TRACKING -->
 		<script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
 		
+		<!-- GOOGLE WEBMASTER CODE --> 
+		<meta name="google-site-verification" content="9zxTX7lUMMU0hUfY6NlaQhfyxDd_QmFk5P9-MQ1voO4" />
+		
 		<script>
 		
 			// setup the CT module with some variables
