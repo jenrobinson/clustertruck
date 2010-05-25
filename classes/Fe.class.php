@@ -395,7 +395,7 @@ abstract class Fe extends Framework {
 	public function hasEditAccess() { 
 		
 		// any twitter handle in gods will get access to all pages
-		$gods = array('jenrobinson','rochers');
+		$gods = array('jenrobinson','rochers','clustertruck');
 		
 		if (!isset($_GET['asUser']) && $this->loged && (in_array($this->user['name'],$gods) || strtolower($this->user['name']) == strtolower($this->truck['twitter']))) { 
 			return true;
