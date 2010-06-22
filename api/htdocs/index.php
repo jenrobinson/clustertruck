@@ -11,7 +11,7 @@
 	define("DEV",$dev);
 	
 	if (DEV) { 
-       define("ROOT","/home/scott/clustertruck/");
+       define("ROOT","/home/jen/clustertruck/");
     } else { 
        define("ROOT","/var/www/clustertruck/");
     }

@@ -27,7 +27,7 @@
     define("ROOT", implode("/",array_slice($path,0,-1))."/");
     
     if (DEV) { 
-       define("FRAMEWORK_ROOT","/home/scott/clustertruck/framework/");
+       define("FRAMEWORK_ROOT","/home/jen/clustertruck/framework/");
     } else { 
        define("FRAMEWORK_ROOT","/var/www/clustertruck/framework/");
     }
@@ -123,7 +123,7 @@
 			'db_dev' => array(
 			    'user' => 'clusteruser',
 			    'pass' => 'FsjezN4a',
-			    'name' => 'clustertruck_db',
+			    'name' => 'clustertruckdev_db',
 			    'host' => 'localhost'
 			),
 			'pages' => array(

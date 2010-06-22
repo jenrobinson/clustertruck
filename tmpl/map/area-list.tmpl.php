@@ -39,4 +39,4 @@
 
 </ul>
 
-<p style="clear:both">&#187; Don't see your neighborhood? <a href="mailto:scott@clustertruck.org">Email Scott</a> and request it.</p>
+<p style="clear:both">&#187; Don't see your neighborhood? <a href="mailto:jen@clustertruck.org">Email Jen</a> and request it.</p>
