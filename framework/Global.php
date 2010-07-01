@@ -23,9 +23,9 @@
     // get the file name
     $path = explode("/",$_SERVER['SCRIPT_FILENAME']);
 
-    // get the root
+	    // get the root
     define("ROOT", implode("/",array_slice($path,0,-1))."/");
-    
+        
     if (DEV) { 
        define("FRAMEWORK_ROOT","/home/jen/clustertruck/framework/");
     } else { 

@@ -34,6 +34,27 @@
         <div class='footer'>
         	
         	<div class="ad">
+        	
+        	<script type="text/javascript"><!--
+				window.googleAfmcRequest = {
+  					client: 'ca-mb-pub-8872687679891829',
+  					ad_type: 'text_image',
+  					output: 'html',
+ 					channel: '4388168458',
+  					format: '320x50_mb',
+  					oe: 'utf8',
+  					color_border: '336699',
+  					color_bg: 'FFFFFF',
+  					color_link: '0000FF',
+  					color_text: '000000',
+  					color_url: '008000',
+				};
+				//--></script>
+			<script type="text/javascript" 
+				src="http://pagead2.googlesyndication.com/pagead/show_afmc_ads.js"></script>
+
+<!--
+Scott's mobile ad 
 				<script type="text/javascript"><!--
 window.googleAfmcRequest = {
   client: 'ca-mb-pub-2556229860154687',
@@ -48,9 +69,10 @@ window.googleAfmcRequest = {
   color_text: '000000',
   color_url: '666666',
 };
-//--></script>
+</script>
 <script type="text/javascript" 
    src="http://pagead2.googlesyndication.com/pagead/show_afmc_ads.js"></script>				        	
+-->
         	</div>
         	
         	<?php if (!$this->loged) { ?>
@@ -65,11 +87,6 @@ window.googleAfmcRequest = {
 			<div class='copy'>
 				Cluster Truck &copy; 2010
 			</div>
-		</div>     
-		    
-        <script src="http://static.getclicky.com/js" type="text/javascript"></script>
-		<script type="text/javascript">clicky.init(172589);</script>
-		<noscript><p><img alt="Clicky" width="1" height="1" src="http://static.getclicky.com/172589ns.gif" /></p></noscript>
-        
+		</div>             
     </body> 
 </html>

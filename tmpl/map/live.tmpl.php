@@ -30,15 +30,26 @@
 	
 	<div id="map">Loading Map...</div> <br />
 	
-	<script type="text/javascript"><!--
+<!-- Scott's Google AdSense code
+	<script type="text/javascript">
 		google_ad_client = "pub-2556229860154687";
-		/* Cluster Truck Top Leader */
 		google_ad_slot = "1402660087";
+		google_ad_width = 728;
+		google_ad_height = 90;
+	</script>
+	<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+-->
+
+	<script type="text/javascript"><!--
+		google_ad_client = "pub-8872687679891829";
+		/* CT Live Map Leaderboard */
+		google_ad_slot = "6532204906";
 		google_ad_width = 728;
 		google_ad_height = 90;
 		//-->
 	</script>
-	<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+	<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+	</script>
 
 </div>
 
