@@ -140,7 +140,6 @@
 				
 				
 			</div>	
-	<!-- SERVED FROM SLICEHOST - JEN DEV VERSION -->
 			
 	<!-- GET YUI2 for PANEL -->
 	<script type="text/javascript" src="http://yui.yahooapis.com/combo?2.8.0r4/build/yahoo-dom-event/yahoo-dom-event.js&2.8.0r4/build/calendar/calendar-min.js"></script> 		
@@ -167,19 +166,6 @@ var _sf_async_config={uid:8030,domain:"clustertruck.org"};
      loadChartbeat : function() { oldonload(); loadChartbeat(); };
 })();
 
-</script>
-
-<!-- GETCLICKY TRACKING -->
-	<script type="text/javascript">
-var clicky = { log: function(){ return; }, goal: function(){ return; }};
-var clicky_site_id = 172589;
-(function() {
-  var s = document.createElement('script');
-  s.type = 'text/javascript';
-  s.async = true;
-  s.src = ( document.location.protocol == 'https:' ? 'https://static.getclicky.com' : 'http://static.getclicky.com' ) + '/js';
-  ( document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0] ).appendChild( s );
-})();
 </script>
 
 <!-- GOOGLE ANALYTICS TRACKING -->
