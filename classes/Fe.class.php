@@ -1,6 +1,6 @@
 <?php
 
-require_once "Twitter.class.php";
+require_once "twitteroauth.php";
 require_once "mdetect.class.php";
 
 //////////////////////////////
@@ -13,7 +13,7 @@ abstract class Fe extends Framework {
 	
 	// default meta description
 	public $metaDescription = 'Get live tracking maps, menus, and schedules for LA-based food trucks.';
-
+               
 	// construct
 	public function __construct($module=false) {
 	
@@ -50,13 +50,13 @@ abstract class Fe extends Framework {
 			
 		// try to get a session
 		$this->getSession();	
-			
+		
 		// context
 		$this->context = p('_context','html');
 		
 		// twitter
-		$this->twitter = new Twitter(TWITTER_USER,TWITTER_PASS);
-		
+		$this->twitter = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET);
+                
 		// m detect
 		$this->uagent_info = new uagent_info();
 		
@@ -318,8 +318,7 @@ abstract class Fe extends Framework {
 	
 	
 	}
-	
-	
+		
 	////////////////////////////////////////////
 	/// process an uploaded image and put it on amazon
 	////////////////////////////////////////////
@@ -395,7 +394,7 @@ abstract class Fe extends Framework {
 	public function hasEditAccess() { 
 		
 		// any twitter handle in gods will get access to all pages
-		$gods = array('jenrobinson','rochers','clustertruck');
+		$gods = array('jenrobinson','rochers','clustertruck', 'hkatalin2006');
 		
 		if (!isset($_GET['asUser']) && $this->loged && (in_array($this->user['name'],$gods) || strtolower($this->user['name']) == strtolower($this->truck['twitter']))) { 
 			return true;

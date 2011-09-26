@@ -19,7 +19,8 @@ class cron extends Fe {
 	}
 	
 	public function twitter() {
-		
+                $connection = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET, ACCESS_TOKEN, ACCESS_TOKEN_SECRET);
+            
 		$this->context = 'xhr';
 		
 		$truckTrack = array();
@@ -28,7 +29,7 @@ class cron extends Fe {
 		
 		// get 30 oldest tweet
 		$tweetList = $this->getTweets();
-		
+		print_r($tweetList); 
 		if (!empty($tweetList)) { 
 		
 				// look to aggregate tweets for a truck
@@ -41,37 +42,37 @@ class cron extends Fe {
 				
 				// order by most tweets
 				ksort($truckTrack);
-				
+                                
 				$trucks = array_keys($truckTrack);
-				$whichTruckHasMost = $trucks[0];
+                                $whichTruckHasMost = $trucks[0];
 				
-				// find the first tweet we want to use, then tweet it with total
+                                // find the first tweet we want to use, then tweet it with total
 				foreach ($tweetList as $t) { 
 						
 						if ($t['to'] == $whichTruckHasMost && !empty($t['tweet'])) { 
 						
 							$tweet = $this->createTweet($t,$truckTrack,$whichTruckHasMost);
-														
+													
 							foreach ($tweetList as $thisTweet) { 
 						
 								if ($thisTweet['to'] == $whichTruckHasMost) { 
 								
 									$this->markTweetProcessed($thisTweet['id']);
 								
-								}
-								
+								}								
 							}
 							
-							$this->twitter->updateStatus($tweet);
-							
+                                                        //$this->twitter->statusesUpdate($tweet);
+							$resp = $connection->post('statuses/update', array( 'status' => $tweet, 'trim_user' => true, 'include_entities' => true, 'wrap_links' => true));
 							break; 
 						
 						// end check truck match	
 						} else if (empty($t['to'])) { 
 							
 							//send a public tweet
-							$tweet = $this->createTweet($t);
-							$this->twitter->updateStatus($tweet);
+							$tweet = $this->createTweet($t);                                                        
+                                                        $resp  = $connection->post('statuses/update', array( 'status' => $tweet, 'trim_user' => true, 'include_entities' => true, 'wrap_links' => true));
+							//$this->twitter->updateStatus($tweet);
 							break;
 						
 						} // empty to match for public tweets
@@ -86,8 +87,10 @@ class cron extends Fe {
 	
 	
 	public function hourlyrecap() { 
-	
-		$this->context = 'xhr';
+	         
+                $connection = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET, ACCESS_TOKEN, ACCESS_TOKEN_SECRET);
+               
+                $this->context = 'xhr';
 		
 		$points = $this->getSchedule(false,p('filter',false));
 		
@@ -95,19 +98,18 @@ class cron extends Fe {
 		
 		$now = strtotime('now') - 25;
 		$oneHourFromNow = strtotime('+1 hour') - 25;
-		
+                
 		foreach ($points as $p) { 
 		
 			if ($p['time_start'] > $now && $p['time_start'] < $oneHourFromNow) { 
-				
-				$truckInfo = json_decode($p['truck_info']);
-				
+		
+				$truckInfo = json_decode($p['truck_info']);		
 				$trucks[] = $truckInfo->twitter;
 			
 			}
 		
 		}
-		
+		//print_r($trucks); die();
 		if (!empty($trucks)) { 
 		
 			$tweet = 'This hour';
@@ -122,13 +124,14 @@ class cron extends Fe {
 				}
 			
 			}
+                        //$tweet .= ' ' .$this->bitlyLink(URI);	
 			
-			$tweet .= ' ' .$this->bitlyLink(URI);
-						
-			$this->twitter->updateStatus($tweet);
-		
+                        $tweet .= ' ' .URI;	                        
+                        $resp = $connection->post('statuses/update', array( 'status' => $tweet, 'trim_user' => true, 'include_entities' => true, 'wrap_links' => true));
+                                              
+			//$this->mytwitter->statusesupdate($tweet);                        
 		}
-			
+		
 	}
 	
 	

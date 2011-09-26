@@ -515,8 +515,10 @@ class truck extends Fe {
 			if (p('twitter',false)) { 
 			
 				// make a call to twitter API to get your pic
-				$twitter = $this->twitter->getUser(p('twitter'));
-				$twitter_image = $twitter['profile_image_url'];
+				                                
+                                $response       = $this->twitter->http('http://api.twitter.com/1/users/show.json?screen_name='.p('twitter').'&include_entities=true', 'GET');
+                                $user_data      = json_decode($response);                                
+                                $twitter_image  = $user_data->profile_image_url;
 				
 			} else { 
 			

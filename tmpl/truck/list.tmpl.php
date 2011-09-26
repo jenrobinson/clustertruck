@@ -28,11 +28,13 @@
 		if (empty($t['twitter_image']) && !empty($t['twitter'])) { 
 		
 			// get the user profile
-			$twitter = $this->twitter->getUser($t['twitter']);
 			
-			if (!empty($twitter['profile_image_url'])) { $this->query("UPDATE trucks SET twitter_image = ? WHERE slug = ? LIMIT 1",array($twitter['profile_image_url'],$t['slug'])); }
-				
-		//}
+                        $response   = $this->twitter->http('http://api.twitter.com/1/users/show.json?screen_name='.$t['twitter'].'&include_entities=true', 'GET');
+                        $user_data  = json_decode($response);                                
+                        $twitter    = $user_data->profile_image_url;
+                        			
+                        if (!empty($twitter)) { $this->query("UPDATE trucks SET twitter_image = ? WHERE slug = ? LIMIT 1",array($twitter,$t['slug'])); }
+		}
 ?>
 		<li>
 			<a href="<?php echo URI.$t['slug']; ?>"><?php echo $t['name']; ?></a>

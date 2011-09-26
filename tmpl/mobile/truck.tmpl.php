@@ -56,7 +56,7 @@
 </ul>
 
 
-<?php if ($this->loged && $this->user['name'] == $truck['twitter']) { $edit = false; ?>
+<?php if ($this->loged && $this->user['name'] == $this->truck['twitter']) { $edit = false; ?>
 
 		<h2>Add To Your Schedule</h2>
 				

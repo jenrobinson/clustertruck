@@ -17,6 +17,4 @@
     
     // dispathc
     $obj->dispatch();
-	
-
 ?>

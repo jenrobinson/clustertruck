@@ -245,8 +245,11 @@ abstract class Framework extends DatabaseMask  {
 						
 						//print_r($data);
 						
-						$this->user['api_key'] = json_decode($data['data'])->api_key;
-						$this->user['api_secret'] = json_decode($data['data'])->api_secret;
+						$this->user['api_key']           = json_decode($data['data'])->api_key;
+						$this->user['api_secret']        = json_decode($data['data'])->api_secret;
+                                                
+                                                $ouath = json_decode($data['data'])->ouath;
+						$this->user['access_token'] = array( 'oauth_token' => $ouath->oauth_token, 'oauth_token_secret' => $ouath->oauth_token_secret);
 						
 						// set user with config
 						Config::set('user',$this->user);
