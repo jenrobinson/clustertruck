@@ -75,6 +75,13 @@
 	} else { 
 		define("TWITTER_USER","clustertruck");
 		define("TWITTER_PASS",'clu$tertruck');
+		
+		define("CONSUMER_KEY", "6WohpwUxYxHlabeow4lycA");
+		define("CONSUMER_SECRET", "EwOEG08Hz4hDkyBAMNNfWFUdeiFFumahsfGJB7QaI");
+		define("OAUTH_CALLBACK", "http://www.clustertruck.org/user/twitter");
+
+		define("ACCESS_TOKEN", "104111013-wBiI4stcxpKcaTbef5it9ZCl2fRk2Z6JsaKIAh5A");
+		define("ACCESS_TOKEN_SECRET", "FE4vdycIKAgg7N7zvUn5KTW3dsQJbTga2eHDoummYY");
 	}
 	
 	// google

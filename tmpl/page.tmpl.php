@@ -34,6 +34,9 @@
 		<!-- CHARTBEAT TRACKING -->
 		<script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
 		
+		<!-- FLIPPA OWNERSHIP VERIFICATION -->
+		<meta name="verifyownership" content="31470a3c32626a9fa5a5e3d81a6eb841" />
+		
 		<!-- GOOGLE WEBMASTER CODE --> 
 		<meta name="google-site-verification" content="9zxTX7lUMMU0hUfY6NlaQhfyxDd_QmFk5P9-MQ1voO4" />
 		
