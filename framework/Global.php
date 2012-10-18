@@ -72,7 +72,7 @@
 		
 		define("CONSUMER_KEY", "YNLUrZnCbvrKiXPtizDmLA");
         define("CONSUMER_SECRET", "pCaAIUcVxQGThEbnU2vOhGP5w2yachxF9gpbzQxRk");
-        define("OAUTH_CALLBACK", "http://dev.clustertruck.org/user/twitter");
+        define("OAUTH_CALLBACK", URI."user/twitter");
 
         define("ACCESS_TOKEN", "125073509-nH8sZZORdjsbqzkmHHCeiSDHXAAgCa2DZQFKD7bK");
         define("ACCESS_TOKEN_SECRET", "72nQBpFh63qVPxwX0mFfEdhvjV04easpDBtkiTitY");
@@ -82,7 +82,7 @@
 		
 		define("CONSUMER_KEY", "6WohpwUxYxHlabeow4lycA");
 		define("CONSUMER_SECRET", "EwOEG08Hz4hDkyBAMNNfWFUdeiFFumahsfGJB7QaI");
-		define("OAUTH_CALLBACK", "http://www.clustertruck.org/user/twitter");
+		define("OAUTH_CALLBACK", URI."user/twitter");
 		
 		define("ACCESS_TOKEN", "104111013-wBiI4stcxpKcaTbef5it9ZCl2fRk2Z6JsaKIAh5A");
 		define("ACCESS_TOKEN_SECRET", "FE4vdycIKAgg7N7zvUn5KTW3dsQJbTga2eHDoummYY");
