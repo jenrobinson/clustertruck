@@ -25,12 +25,16 @@
 
 	    // get the root
     define("ROOT", implode("/",array_slice($path,0,-1))."/");
-        
+    
+    /* JR: Redefining FRAMEWORK_ROOT for Heroku
     if (DEV) { 
        define("FRAMEWORK_ROOT","/home/jen/clustertruck/framework/");
     } else { 
        define("FRAMEWORK_ROOT","/var/www/clustertruck/framework/");
     }
+    */
+    
+    define("FRAMEWORK_ROOT","/framework/");
 
     // need to get base tree
     $uri = explode('/',$_SERVER['SCRIPT_NAME']);  

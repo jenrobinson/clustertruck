@@ -150,38 +150,19 @@
 	<!-- BASE YUI3 MODULE -->
 	<script type="text/javascript" src="<?php echo URI; ?>assets/js/base.js?v=<?php echo ASSET_VERSION; ?>"></script>			
 	
-<!-- CHARTBEAT TRACKING --> 
-<script type="text/javascript">
-var _sf_async_config={uid:8030,domain:"clustertruck.org"};
-(function(){
-  function loadChartbeat() {
-    window._sf_endpt=(new Date()).getTime();
-    var e = document.createElement('script');
-    e.setAttribute('language', 'javascript');
-    e.setAttribute('type', 'text/javascript');
-    e.setAttribute('src',
-       (("https:" == document.location.protocol) ? "https://s3.amazonaws.com/" : "http://") +
-       "static.chartbeat.com/js/chartbeat.js");
-    document.body.appendChild(e);
-  }
-  var oldonload = window.onload;
-  window.onload = (typeof window.onload != 'function') ?
-     loadChartbeat : function() { oldonload(); loadChartbeat(); };
-})();
 
-</script>
-
-<!-- GOOGLE ANALYTICS TRACKING -->
+	<!-- GOOGLE ANALYTICS TRACKING -->
 	<script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-try {
-var pageTracker = _gat._getTracker("UA-13242813-1");
-pageTracker._setDomainName(".clustertruck.org");
-pageTracker._trackPageview();
-} catch(err) {}</script>
+		var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+		document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+	<script type="text/javascript">
+		try {
+			var pageTracker = _gat._getTracker("UA-13242813-1");
+			pageTracker._setDomainName(".clustertruck.org");
+			pageTracker._trackPageview();
+		} catch(err) {}
+	</script>
 	
 	</body>
 </html>
