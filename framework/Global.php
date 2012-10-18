@@ -123,22 +123,22 @@
 		// config
 		private static $config = array(
 			'db' => array(
-			    'user' => 'clusteruser',
-			    'pass' => 'FsjezN4a',
-			    'name' => 'clustertruck_db',
-			    'host' => 'localhost'
+			    'user' => 'b5622599712871',
+			    'pass' => '6721dea6',
+			    'name' => 'heroku_8f94da5d0fb4a13',
+			    'host' => 'us-cdbr-east-02.cleardb.com'
 			),
 			'db_prod' => array(
-			    'user' => 'clusteruser',
-			    'pass' => 'FsjezN4a',
-			    'name' => 'clustertruck_db',
-			    'host' => 'localhost'
+			    'user' => 'b5622599712871',
+			    'pass' => '6721dea6',
+			    'name' => 'heroku_8f94da5d0fb4a13',
+			    'host' => 'us-cdbr-east-02.cleardb.com'
 			),
 			'db_dev' => array(
-			    'user' => 'clusteruser',
-			    'pass' => 'FsjezN4a',
-			    'name' => 'clustertruckdev_db',
-			    'host' => 'localhost'
+			    'user' => 'b5622599712871',
+			    'pass' => '6721dea6',
+			    'name' => 'heroku_8f94da5d0fb4a13',
+			    'host' => 'us-cdbr-east-02.cleardb.com'
 			),
 			'pages' => array(
 			
