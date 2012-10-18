@@ -34,7 +34,7 @@
     }
     */
     
-    define("FRAMEWORK_ROOT","/framework/");
+    define("FRAMEWORK_ROOT","/app/www/framework/");
 
     // need to get base tree
     $uri = explode('/',$_SERVER['SCRIPT_NAME']);  

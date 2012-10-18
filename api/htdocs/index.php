@@ -18,7 +18,7 @@
     }
     */
     
-    define("ROOT","/");
+    define("ROOT","/app/www/");
    	
     // global
     require(ROOT."framework/Global.php");
