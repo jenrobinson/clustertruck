@@ -26,14 +26,6 @@
 	    // get the root
     define("ROOT", implode("/",array_slice($path,0,-1))."/");
     
-    /* JR: Redefining FRAMEWORK_ROOT for Heroku
-    if (DEV) { 
-       define("FRAMEWORK_ROOT","/home/jen/clustertruck/framework/");
-    } else { 
-       define("FRAMEWORK_ROOT","/var/www/clustertruck/framework/");
-    }
-    */
-    
     define("FRAMEWORK_ROOT","/app/www/framework/");
 
     // need to get base tree
@@ -72,7 +64,7 @@
 		
 		define("CONSUMER_KEY", "YNLUrZnCbvrKiXPtizDmLA");
         define("CONSUMER_SECRET", "pCaAIUcVxQGThEbnU2vOhGP5w2yachxF9gpbzQxRk");
-        define("OAUTH_CALLBACK", URI."user/twitter");
+        define("OAUTH_CALLBACK", "http://dev.clustertruck.org/user/twitter");
 
         define("ACCESS_TOKEN", "125073509-nH8sZZORdjsbqzkmHHCeiSDHXAAgCa2DZQFKD7bK");
         define("ACCESS_TOKEN_SECRET", "72nQBpFh63qVPxwX0mFfEdhvjV04easpDBtkiTitY");
@@ -82,7 +74,7 @@
 		
 		define("CONSUMER_KEY", "6WohpwUxYxHlabeow4lycA");
 		define("CONSUMER_SECRET", "EwOEG08Hz4hDkyBAMNNfWFUdeiFFumahsfGJB7QaI");
-		define("OAUTH_CALLBACK", URI."user/twitter");
+		define("OAUTH_CALLBACK", "http://www.clustertruck.org/user/twitter");
 		
 		define("ACCESS_TOKEN", "104111013-wBiI4stcxpKcaTbef5it9ZCl2fRk2Z6JsaKIAh5A");
 		define("ACCESS_TOKEN_SECRET", "FE4vdycIKAgg7N7zvUn5KTW3dsQJbTga2eHDoummYY");
@@ -139,9 +131,9 @@
 			    'host' => 'us-cdbr-east-02.cleardb.com'
 			),
 			'db_dev' => array(
-			    'user' => 'b5622599712871',
-			    'pass' => '6721dea6',
-			    'name' => 'heroku_8f94da5d0fb4a13',
+			    'user' => 'bf9cdd91a17932',
+			    'pass' => 'cf74a341',
+			    'name' => 'heroku_b93e93ed0c58059',
 			    'host' => 'us-cdbr-east-02.cleardb.com'
 			),
 			'pages' => array(

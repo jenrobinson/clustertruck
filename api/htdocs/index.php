@@ -8,16 +8,7 @@
 	}
    	
    	// in dev
-	define("DEV",$dev);
-	
-	/* JR: Redefining ROOT for Heroku
-	if (DEV) { 
-       define("ROOT","/home/jen/clustertruck/");
-    } else { 
-       define("ROOT","/var/www/clustertruck/");
-    }
-    */
-    
+	define("DEV",$dev);	
     define("ROOT","/app/www/");
    	
     // global
